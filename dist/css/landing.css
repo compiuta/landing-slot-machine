@@ -1,1 +1,1 @@
-*{box-sizing:border-box}.body-tag{margin:0;padding:0;background-color:#000}
+*{box-sizing:border-box}.body-tag{margin:0;padding:0;background-color:#000}.slot-landing{display:flex;height:100vh}.slot-landing-view{flex:1 1 auto;background-color:slateblue;position:relative}.slot-landing-modal{position:absolute}.slot-landing-selector{width:30%;background-color:purple;position:relative}.slot-landing-menu{max-height:100%;overflow-y:auto;overflow-x:hidden;width:100%}.slot-menu-item{height:200px;width:100%;background-color:ghostwhite;margin:2px}

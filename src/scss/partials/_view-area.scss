@@ -1,0 +1,14 @@
+.slot-landing {
+    display: flex;
+    height: 100vh;
+}
+
+.slot-landing-view {
+    flex: 1 1 auto;
+    background-color: slateblue;
+    position: relative;
+}
+
+.slot-landing-modal {
+    position: absolute;
+}
