@@ -1,6 +1,9 @@
 .slot-landing {
     display: flex;
     height: 100vh;
+    min-height: 630px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .slot-landing-view {
@@ -12,9 +15,13 @@
     position: relative;
 }
 
+.slot-hero-image-container {
+    position: relative;
+}
+
 .slot-hero-container {
     position: relative;
-    max-width: 25%;
+    max-width: 40%;
 }
 
 .slot-hero-image {
@@ -25,7 +32,7 @@
 .slot-hero-title {
     font-family: 'Oleo Script', cursive;
     color: $dark-color;
-    font-size: 10em;
+    font-size: 300px;
     font-weight: normal;
     margin: 0;
     position: absolute;
@@ -38,19 +45,19 @@
     position: relative;
     border-right: 1px solid $highlight-color;
     border-bottom: 1px solid $highlight-color;
-    height: 3em;
+    height: 50px;
     width: 50%;
 }
 
 .slot-hero-button {
     display: inline-block;
-    padding: .8em;
+    padding: 12px;
     background-color: $light-color;
     color: $highlight-color;
     position: absolute;
-    top: 1.5em;
+    top: 24px;
     right: 100%;
-    width: 10em;
+    width: 160px;
     border: 1px solid $highlight-color;
     border-radius: 4px;
     text-decoration: none;
@@ -66,4 +73,27 @@
 
 .slot-landing-modal {
     position: absolute;
+}
+
+@media (max-width: 900px) {
+    .slot-landing {
+        min-height: 0;
+    }
+
+    .slot-hero-title {
+        font-size: 9em;
+    }
+
+    .slot-hero-button-wrap {
+        border: 0;
+        height: auto;
+        width: auto;
+        margin: 20px 0 0 0;
+    }
+
+    .slot-hero-button {
+        width: 100%;
+        position: static;
+        padding: 12px 9px;
+    }
 }
