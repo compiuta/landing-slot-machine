@@ -9,11 +9,20 @@
         <script src="dist/js/landing.min.js" defer></script>
     </head>
     <body class="body-tag">
-        <div class="slot-landing">
+        <div data-slot-landing class="slot-landing">
+            <div data-mobile-menu class="slot-mobile-menu">
+                <svg viewBox="0 0 100 80" width="40" height="40" class="mobile-menu-icon">
+                    <rect class="rect-one mobile-menu-rect" width="100" height="8"></rect>
+                    <rect class="rect-two mobile-menu-rect" y="30" width="100" height="8"></rect>
+                    <rect class="rect-three mobile-menu-rect" y="60" width="100" height="8"></rect>
+                  </svg>
+            </div>
             <div class="slot-landing-view">
                 <div class="slot-hero-container">
-                    <img src="dist/images/slot-machine.png" alt="Slot Machine" class="slot-hero-image">
+                    <div class="slot-hero-image-container">
+                        <img src="dist/images/slot-machine.png" alt="Slot Machine" class="slot-hero-image">
                     <h1 class="slot-hero-title">sm</h1>
+                    </div>
                     <div class="slot-hero-button-wrap">
                         <a href="https://compiuta.github.io/slot-machine/" class="slot-hero-button">Start Playing</a>
                     </div>
@@ -21,14 +30,31 @@
                 <div class="slot-landing-modal"></div>
             </div>
             <div class="slot-landing-selector">
-                <nav class="slot-landing-menu">
-                    <div class="slot-menu-item"></div>
-                    <div class="slot-menu-item"></div>
-                    <div class="slot-menu-item"></div>
-                    <div class="slot-menu-item"></div>
-                    <div class="slot-menu-item"></div>
-                    <div class="slot-menu-item"></div>
-                </nav>
+                <a href="javascript:void(0)" data-scroll-up class="scroll-button-up scroll-button"><div class="arrow-up"></div></a>
+                <div class="main-nav-wrap">
+                    <img src="dist/images/150-placeholder.png" alt="placeholder image" class="placeholder-image">
+                    <nav data-main-nav class="slot-landing-menu">
+                        <div class="slot-menu-item diamond">
+                            <img src="dist/images/150-placeholder.png" alt="placeholder image" class="placeholder-image">
+                        </div>
+                        <div class="slot-menu-item seven">
+                            <img src="dist/images/150-placeholder.png" alt="placeholder image" class="placeholder-image">
+                        </div>
+                        <div class="slot-menu-item triple-bar">
+                            <img src="dist/images/150-placeholder.png" alt="placeholder image" class="placeholder-image">
+                        </div>
+                        <div class="slot-menu-item double-bar">
+                            <img src="dist/images/150-placeholder.png" alt="placeholder image" class="placeholder-image">
+                        </div>
+                        <div class="slot-menu-item single-bar">
+                            <img src="dist/images/150-placeholder.png" alt="placeholder image" class="placeholder-image">
+                        </div>
+                        <div class="slot-menu-item cherry">
+                            <img src="dist/images/150-placeholder.png" alt="placeholder image" class="placeholder-image">
+                        </div>
+                    </nav>
+                </div>
+                <a href="javascript:void(0)" data-scroll-down class="scroll-button-down scroll-button"><div class="arrow-down"></div></a>
             </div>
         </div>
     </body>
