@@ -5,9 +5,10 @@
     const mobileMenu = document.querySelector('[data-mobile-menu]');
     const navElement = document.querySelector('[data-main-nav]');
     const buttonScrollUp = document.querySelector('[data-scroll-up]');
-    const ButtonScrollDown = document.querySelector('[data-scroll-down]');
-    let menuItemSize;
+    const buttonScrollDown = document.querySelector('[data-scroll-down]');
+    const numberOfMenuItems = 6;
     let navElementSize;
+    let menuItemSize;
     let currentMenuItem = 0;
 
     function toggleMobileMenu() {
@@ -15,15 +16,48 @@
     }
 
     function calculateElementsSize() {
-        console.log('resized');
+        navElementSize = navElement.offsetHeight;
+        menuItemSize = navElementSize / numberOfMenuItems;
+    }
+
+    function resizeElements() {
+        calculateElementsSize();
+        navElement.style.top = `-${currentMenuItem * menuItemSize}px`;
+    }
+
+    function toggleSliderButtons() {
+        if (currentMenuItem === 0) {
+            buttonScrollUp.classList.add('disable-button');
+        } else {
+            buttonScrollUp.classList.remove('disable-button');
+        }
+
+        if (currentMenuItem === (numberOfMenuItems - 1)) {
+            buttonScrollDown.classList.add('disable-button');
+        } else {
+            buttonScrollDown.classList.remove('disable-button');
+        }
     }
 
     function navScroll(e) {
-        
+        const clickedButton = e.currentTarget;
+
+        if (clickedButton.classList.contains('scroll-button-down')) {
+            currentMenuItem += 1;
+        } else {
+            currentMenuItem -= 1;
+        }
+
+        toggleSliderButtons();
+
+        navElement.style.top = `-${currentMenuItem * menuItemSize}px`;
     }
 
     mobileMenu.addEventListener('click', toggleMobileMenu);
     buttonScrollUp.addEventListener('click', navScroll);
-    ButtonScrollDown.addEventListener('onmousedown', navScroll);
-    window.addEventListener('resize', calculateElementsSize)
+    buttonScrollDown.addEventListener('click', navScroll);
+    window.addEventListener('resize', resizeElements);
+
+    calculateElementsSize();
+    toggleSliderButtons();
 })(window);
