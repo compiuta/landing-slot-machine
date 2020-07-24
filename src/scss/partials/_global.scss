@@ -6,6 +6,10 @@
     display: none!important;
 }
 
+.disable-button {
+    pointer-events: none;
+}
+
 .body-tag {
     margin: 0;
     padding: 0;
