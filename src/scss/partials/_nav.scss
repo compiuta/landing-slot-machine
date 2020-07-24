@@ -23,6 +23,7 @@
     top: 0;
     overflow: hidden;
     width: 100%;
+    transition: top .2s ease-in-out;
 }
 
 .placeholder-image {
