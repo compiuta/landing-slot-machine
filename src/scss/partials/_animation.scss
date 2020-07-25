@@ -1,0 +1,33 @@
+.main-nav-modal {
+    position: absolute;
+    z-index: 3;
+    display: none;
+}
+
+.animate-transition {
+
+}
+
+.diamond-active {
+    background: $highlight-color;
+}
+
+.seven-active {
+    background-color: $red-color;
+}
+
+.triple-bar-active {
+    background-color: $yellow-color;
+}
+
+.double-bar-active {
+    background-color: $grey-color;
+}
+
+.single-bar-active {
+    background-color: $teal-color;
+}
+
+.cherry-active {
+    background-color: $beige-color;
+}
