@@ -6,6 +6,15 @@
     const navElement = document.querySelector('[data-main-nav]');
     const buttonScrollUp = document.querySelector('[data-scroll-up]');
     const buttonScrollDown = document.querySelector('[data-scroll-down]');
+    const navModal = document.querySelector('[data-nav-modal]');
+    const slotItems = [
+        'diamond-active',
+        'seven-active',
+        'triple-bar-active',
+        'double-bar-active',
+        'single-bar-active',
+        'cherry-active'
+    ];
     const numberOfMenuItems = 6;
     let navElementSize;
     let menuItemSize;
@@ -39,8 +48,15 @@
         }
     }
 
+    function toggleCurrentMenuItem() {
+        navElement.classList.toggle(slotItems[currentMenuItem]);
+        navModal.classList.toggle(slotItems[currentMenuItem]);
+    }
+
     function navScroll(e) {
         const clickedButton = e.currentTarget;
+
+        toggleCurrentMenuItem();
 
         if (clickedButton.classList.contains('scroll-button-down')) {
             currentMenuItem += 1;
@@ -48,8 +64,8 @@
             currentMenuItem -= 1;
         }
 
+        toggleCurrentMenuItem();
         toggleSliderButtons();
-
         navElement.style.top = `-${currentMenuItem * menuItemSize}px`;
     }
 
