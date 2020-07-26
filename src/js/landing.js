@@ -84,10 +84,7 @@
     function openModal() {
         navModal.classList.remove('hide');
         bodyTag.classList.add('animation-activated');
-
-        setTimeout(() => {
-            
-        }, 1000);
+        slotLandingContainer.classList.add('mobile-menu-open');
     }
 
     function closeModal() {
