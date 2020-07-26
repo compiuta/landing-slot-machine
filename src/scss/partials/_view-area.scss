@@ -50,20 +50,12 @@
 }
 
 .slot-hero-button {
-    display: inline-block;
-    padding: 12px;
     background-color: $light-color;
     color: $highlight-color;
     position: absolute;
     top: 24px;
     right: 100%;
-    width: 160px;
     border: 1px solid $highlight-color;
-    border-radius: 4px;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    transition: all .3s ease-in-out;
 }
 
 .slot-hero-button:hover {
