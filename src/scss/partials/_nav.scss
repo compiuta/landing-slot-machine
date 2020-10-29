@@ -34,13 +34,18 @@
 
 .slot-menu-item {
     border-radius: 50%;
+    padding-top: 100%;
+    position: relative;
 }
 
 .slot-item {
-    width: 100%;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 65%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
 }
 
 .diamond {
